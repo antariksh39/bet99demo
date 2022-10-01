@@ -23,6 +23,11 @@ public class TodoController {
     @Autowired
     private TodoServiceImpl todoService;
 
+    @GetMapping(value = "hello")
+    public String getHello(){
+        return "hello todo world";
+    }
+
     @GetMapping(value = "todo")
     public ApiResponse getAll(){
         return todoService.getAllTodo();
@@ -33,14 +38,18 @@ public class TodoController {
         return todoService.getTodo(id);
     }
 
-    @GetMapping(value = "hello")
-    public String getHello(){
-        return "hello todo world";
-    }
-
     @PostMapping(value = "todo")
     public ApiResponse saveTodo(@RequestBody TodoModel todo){
         return todoService.saveTodo(todo);
     }
 
+    @PutMapping(value = "todo")
+    public ApiResponse updateTodo(@RequestBody TodoModel todo){
+        return todoService.updateTodo(todo);
+    }
+
+    @DeleteMapping(value = "todo/{id}")
+    public ApiResponse deleteTodo(@PathVariable("id") int id){
+        return todoService.deleteTodo(id);
+    }
 }
