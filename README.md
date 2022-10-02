@@ -32,11 +32,17 @@ And for request/response we will be using command line tool name curl.
 
 ## SECTION TWO - Getting Client compiled and Running  
 
-1. As client we will be using the command line Curl Command
-2. 
+1. As client, we will be using the command line Curl Command
+2. The Command Line Interface comes along with every Operation System. In case the curl command is not available, you can download the curl package using [this Guide](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux).
+3. once the Springboot application is successfully launched, open up the Command Line Interface and run the following command.  
+ `curl -v localhost:8080/bet99/todo` 
+ This will give the list of all Tasks present in the Redis DB at the moment
+
+ 
 
 ## SECTION THREE - Application Walkthrough of all services  
-
+There are a total of Five (05) Endpoints in the TODO Applicaiton.  
+Here are the details.
 |                |Endpoint                          |HTTP Method|
 |----------------|-------------------------------|-----------------------------|
 |Get List of Todos|`{baseUrl}/bet99/todo` |GET |
@@ -45,5 +51,5 @@ And for request/response we will be using command line tool name curl.
 |Update an exising TODO|`{baseUrl}/bet99/todo` |PUT|
 |Delete a TODO by id|`{baseUrl}/bet99/todo/{id}` |Delete|
 
-{baseUrl} = http://127.0.0.1:8080 (Check port for confirmation)  
+{baseUrl} = http://127.0.0.1:8080 (Check port for confirmation)
 {id} = Integer like 1, 5, 800 etc.
