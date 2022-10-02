@@ -10,4 +10,5 @@ public class Constants {
     public static final String TODO_INCOMPLETE_DATA_FOR_SAVE = "TODO data is not complete. Please make sure the 'userId' and 'description' are filled.";
     public static final String TODO_INCOMPLETE_DATA_FOR_UPDATE = "TODO data is not complete. Please make sure the 'taskId' , 'userId' and 'description' are filled.";
     public static final String TODO_WRONG_DATE = "Wrong Date Format. Please use " + TODO_DATE_FORMAT + " e.g. 2022-03-11 13:23:44";
+    public static final String TODO_UNAUTHORIZED = "Unauthorized Access - only the 'userId' starting with BET99 are allowed";
 }
